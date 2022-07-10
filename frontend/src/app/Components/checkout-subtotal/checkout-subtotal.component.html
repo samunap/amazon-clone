@@ -1,0 +1,9 @@
+<div class="subtotal" *ngIf="shoppingCart.getCartLength() > 0">
+  <p>Totale provvisorio: ({{shoppingCart.getCartLength()}} articoli)
+     <strong>${{shoppingCart.getTotal()}}</strong></p>
+  <div class="subtotal_gift">
+    <input type="checkbox" />
+    <p>Quest'ordine contiene un regalo</p>
+  </div>
+  <button>Procedi all'ordine</button>
+</div>

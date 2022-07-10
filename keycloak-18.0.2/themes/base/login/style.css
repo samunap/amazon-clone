@@ -1,0 +1,17 @@
+.login_form >h1{
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  form > h5{
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  form > input{
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 98%;
+  }
+  
