@@ -1,4 +1,7 @@
+import { ShoppingCartService } from './../../SERVICES/shopping-cart.service';
 import { Component, OnInit } from '@angular/core';
+import { render } from 'creditcardpayments/creditCardPayments';
+
 
 @Component({
   selector: 'app-paypal-button',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaypalButtonComponent implements OnInit {
 
-  constructor() { }
+  constructor(private shopping_cart:ShoppingCartService) {
+    render(
+      {
+        id: "#myPaypalButtons",
+        currency: "USD",
+        value: this.shopping_cart.getTotal().toString(),
+        onApprove: (details) => {
+          alert("Transazione avvenuta con successo!");
+        }
+      }
+    );
+  }
 
   ngOnInit(): void {
+
+
+
+
   }
 
 }

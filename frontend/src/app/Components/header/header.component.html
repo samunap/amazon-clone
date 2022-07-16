@@ -28,7 +28,7 @@
       <span class="header_menu_top_item">Resi</span>
       <span class="header_menu_bottom_item">e ordini</span>
     </div>
-    <div routerLink="/checkout" class="header_menu_cart">
+    <div routerLink="/checkout" class="header_menu_cart" (click)="back()">
       <mat-icon>shopping_cart</mat-icon>
       <p class="header_cart_number">{{shoppingCart.getCartLength()}}</p>
     </div>

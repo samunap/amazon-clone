@@ -6,5 +6,5 @@
     <p>Quest'ordine contiene un regalo</p>
   </div>
   <button *ngIf="!this.loginService.getIsLogged()" (click) ="this.loginService.login()">Procedi all'ordine</button>
-  <button *ngIf="this.loginService.getIsLogged()">Procedi all'ordine</button>
+  <app-paypal-button *ngIf="this.loginService.getIsLogged()"></app-paypal-button>
 </div>

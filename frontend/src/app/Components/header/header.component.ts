@@ -38,6 +38,9 @@ export class HeaderComponent implements OnInit {
   async ngOnInit() {
     }
 
+  back(){
+    window.location.replace("http://localhost:4200/checkout")
+  }
 
 
 
