@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/SERVICES/product';
+import { Product } from 'src/app/Components/products/product';
+
 import { ProductService } from '../../SERVICES/product.service'
 
 @Component({

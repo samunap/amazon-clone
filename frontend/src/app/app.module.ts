@@ -19,9 +19,15 @@ import { ProductService } from './SERVICES/product.service';
 import { ProductsComponent } from './Components/products/products.component';
 import { CheckoutProductsComponent } from './Components/checkout-products/checkout-products.component';
 import { CheckoutSubtotalComponent } from './Components/checkout-subtotal/checkout-subtotal.component';
+import { MatMenuModule } from '@angular/material/menu';
+
 
 import { OAuthModule } from 'angular-oauth2-oidc'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddComponent } from './Products/add/add.component';
+import { UpdateComponent } from './Products/update/update.component';
+import { DeleteComponent } from './Products/delete/delete.component';
+import { PaypalButtonComponent } from './Components/paypal-button/paypal-button.component';
 
 
 @NgModule({
@@ -35,7 +41,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BannerComponent,
     ProductsComponent,
     CheckoutProductsComponent,
-    CheckoutSubtotalComponent
+    CheckoutSubtotalComponent,
+    AddComponent,
+    UpdateComponent,
+    DeleteComponent,
+    PaypalButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +56,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     HttpClientModule,
     FormsModule,
+    MatMenuModule,
     ReactiveFormsModule,
     OAuthModule.forRoot({
       resourceServer: {

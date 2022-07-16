@@ -18,14 +18,14 @@ public class ProductController {
         this.productService = productService;
     }
 
- //   @RolesAllowed("backend-user")
+    //@RolesAllowed("backend-user")
     @GetMapping("/all")
     public ResponseEntity<List<Product>> getAllProducts(){
         List<Product> products = productService.findAllProduct();
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
-  //  @RolesAllowed("backend-user")
+    //@RolesAllowed("backend-user")
     @GetMapping("/find/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable("id") Long id){
         Product product = productService.findProductById(id);
@@ -33,23 +33,23 @@ public class ProductController {
     }
 
     @PostMapping("/add")
-//    @RolesAllowed("backend-user")
+    //@RolesAllowed("backend-user")
     public ResponseEntity<Product> addProduct(@RequestBody Product product){
         Product newProduct = productService.addProduct(product);
         return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
- //   @RolesAllowed("backend-admin")
+    //@RolesAllowed("backend-admin")
     public ResponseEntity<Product> updateProduct(@RequestBody Product product){
         Product updateProduct = productService.updateProduct(product);
         return new ResponseEntity<>(updateProduct, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{id}")
-  //  @RolesAllowed("backend-admin")
-    public ResponseEntity<?> deleteProduct(@PathVariable("id") Long id){
-        productService.deleteProduct(id);
+   // @RolesAllowed("backend-admin")
+    public ResponseEntity<?> deleteProductById(@PathVariable("id") Long id){
+        productService.deleteProductById(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

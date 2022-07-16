@@ -1,3 +1,5 @@
+import { LoginService } from './../../SERVICES/login.service';
+import { LoginComponent } from './../../Pages/login/login.component';
 import { Component, OnInit } from '@angular/core';
 import { ShoppingCartService } from 'src/app/SERVICES/shopping-cart.service';
 
@@ -8,7 +10,7 @@ import { ShoppingCartService } from 'src/app/SERVICES/shopping-cart.service';
 })
 export class CheckoutSubtotalComponent implements OnInit {
 
-  constructor(public shoppingCart: ShoppingCartService) { }
+  constructor(public shoppingCart: ShoppingCartService, public loginService :LoginService) { }
 
   ngOnInit(): void {
   }

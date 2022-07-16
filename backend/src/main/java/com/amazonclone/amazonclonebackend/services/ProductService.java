@@ -37,7 +37,7 @@ public class ProductService {
         return productRepository.findProductById(id).orElseThrow(() ->new ProductNotFoundException("Il prodotto con id " + id + "non è stato trovato"));
     }
 
-    public void deleteProduct(Long id){
-        productRepository.deleteProductById(id);
+    public void deleteProductById(Long id){
+        productRepository.deleteById(id);
     }
 }

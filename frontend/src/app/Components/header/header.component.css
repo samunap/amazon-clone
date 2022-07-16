@@ -58,6 +58,8 @@
 .header_menu_top_item{
   font-size: 10px;
   color: lightgray;
+  margin-left:5px;
+  margin-top: 2px;
 }
 .header_menu_bottom_item{
   font-size: 13px;
@@ -97,3 +99,13 @@ div[ng-reflect-router-link]{
 img[ng-reflect-router-link]{
   cursor: pointer;
 }
+
+.list_log{
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin-right: 10px;
+  font-weight: 700;
+}
+
