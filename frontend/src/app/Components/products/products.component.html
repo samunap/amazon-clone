@@ -4,12 +4,12 @@
       <p>{{product.name}}</p>
       <p><strong>{{product.price}}</strong> €</p>
       <img src={{product.imageUrl}}>
+      <button class="add" (click)="addToCart(product)">Aggiungi al carrello</button>
       <div class="update_delete">
-        <button class="add" (click)="addToCart(product)">Aggiungi al carrello</button>
-        <button *ngIf="loginService.getIsAdmin()" (click)="storageProducts(product)" (click)="back()" (click)="onDelete(product)" mat-fab style="background-color: red; "color="black">
+        <button *ngIf="loginService.getIsLogged() && loginService.getIsAdmin()" (click)="storageProducts(product)" (click)="back()" (click)="onDelete(product)" mat-fab style="background-color: red; "color="black">
           <mat-icon>delete</mat-icon>
         </button>
-        <button  class="update"mat-fab *ngIf="loginService.getIsAdmin()"  (click)="storageProducts(product)" (click)="findProduct(product)" routerLink="/update"  style="background-color: blue;"  color="black">
+        <button  class="update"mat-fab *ngIf="loginService.getIsLogged() && loginService.getIsAdmin()"  (click)="storageProducts(product)" (click)="findProduct(product)" routerLink="/update"  style="background-color: blue;"  color="black">
           <mat-icon>update</mat-icon>
         </button>
       </div>
