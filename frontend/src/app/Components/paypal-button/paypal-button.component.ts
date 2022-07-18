@@ -14,7 +14,7 @@ export class PaypalButtonComponent implements OnInit {
     render(
       {
         id: "#myPaypalButtons",
-        currency: "USD",
+        currency: "EUR",
         value: this.shopping_cart.getTotal().toString(),
         onApprove: (details) => {
           alert("Transazione avvenuta con successo!");

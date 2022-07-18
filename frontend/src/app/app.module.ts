@@ -26,7 +26,6 @@ import { OAuthModule } from 'angular-oauth2-oidc'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddComponent } from './Products/add/add.component';
 import { UpdateComponent } from './Products/update/update.component';
-import { DeleteComponent } from './Products/delete/delete.component';
 import { PaypalButtonComponent } from './Components/paypal-button/paypal-button.component';
 
 
@@ -44,7 +43,6 @@ import { PaypalButtonComponent } from './Components/paypal-button/paypal-button.
     CheckoutSubtotalComponent,
     AddComponent,
     UpdateComponent,
-    DeleteComponent,
     PaypalButtonComponent
   ],
   imports: [
